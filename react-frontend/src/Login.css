@@ -1,0 +1,74 @@
+/* Container for the entire login form */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('bg.png') no-repeat center center fixed;
+    font: Tahoma;
+    color: white;
+}
+
+/* Styling the form itself */
+.login-form {
+   
+    padding: 30px;
+    border-radius: 10px;
+  
+    width: 300px;
+    text-align: center;
+}
+
+/* Styling the heading */
+.login-form h2 {
+    margin-bottom: 20px;
+    font-size: 36px;
+    
+}
+
+/* Form group styling (labels and inputs) */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+  
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Input fields styling */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #007BFF;
+}
+
+/* Button styling */
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #d46b16;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+    opacity: 0.7;
+}

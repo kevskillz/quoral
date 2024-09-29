@@ -1,0 +1,132 @@
+.App {
+    text-align: center;
+    background: url('bg.png') no-repeat center center fixed;
+    font: Tahoma;
+  }
+  
+  .landing-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center;
+    align-items: center;
+    background: url('bg.png') no-repeat center center fixed;
+    color: white;
+  }
+  
+  .landing-section h1{
+    font-size: 100px;
+  }
+  
+  .landing-section p{
+    font-size: 20px;
+  }
+  
+  .content-section {
+    height: 100vh;
+    display: flex; /* Use flex to create a two-column layout */
+    justify-content: space-around; /* Space columns evenly */
+    align-items: center;
+    background: url('bg.png') no-repeat center center fixed;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .content-section p{
+    font-size: 20px;
+  }
+  
+  .column {
+    flex: 1; /* Default column width */
+    margin: 10px; /* Add some space between columns */
+  }
+  
+  /* Adjust column widths as needed */
+  .column.left {
+    flex: 3; /* Left column takes 2/3 of the space */
+  }
+  
+  .column.right {
+    flex: 5; /* Right column takes 1/3 of the space */
+  }
+  
+  
+  .scroll-text {
+    font-size: 2.5rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .scroll-arrow {
+    position: relative; /* Change to absolute if necessary */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Add margin for spacing */
+    cursor: pointer; /* Change cursor to pointer */
+    z-index: 1; /* Ensure it's above other elements */
+  }
+  
+  /* Optional: Style for arrow hover */
+  .scroll-arrow:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+  }
+  
+  /* Add a responsive media query if needed */
+  @media (max-width: 600px) {
+    .scroll-arrow {
+      font-size: 1.5rem; /* Adjust size for smaller screens */
+    }
+  }
+  
+  .fish {
+    opacity: 0; /* Start hidden */
+    transition: opacity 0.5s ease; /* Smooth transition */
+  }
+  
+  .fish.visible {
+    opacity: 1; /* Visible when needed */
+  }
+  
+  /* Optional: Add some animation keyframes if needed for a jumping effect */
+  @keyframes jump {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+  }
+  
+  /* To apply jumping animation to fish */
+  .fish {
+    animation: jump 1.5s infinite; /* Apply jumping animation */
+  }
+  
+  .button-container {
+    display: flex;                 /* Use flex to position the button */
+    justify-content: center;       /* Center the button horizontally */
+    margin-top: auto;              /* Push the button down */
+    padding-bottom: 50px;          /* Optional: Adjust this value to control the button's distance from the bottom */
+    width: 100%;
+  }
+  
+  .demo-button {
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #d46b16; /* Button color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    
+    
+  }
+  
+  .demo-button:hover {
+    opacity: 75%;
+  }
